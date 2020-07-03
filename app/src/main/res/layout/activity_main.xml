@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <in.unicodelabs.kdgaugeview.KdGaugeView
+            android:id="@+id/speedMeter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            app:maxSpeed="180"
+            app:minSpeed="0"
+            app:speed="60"
+            app:speed_limit="90"
+
+            app:unitOfMeasurement="km/hr"
+            app:animationTime="2000"
+            app:speedTextSize="60dp"
+            app:unitOfMeasurementTextSize="25dp"
+            app:speedLimitTextSize="15dp"
+            app:speedDialRingWidth="25dp"
+            app:speedDialRingInnerPadding="20dp"
+
+            app:dialActiveColor="#D3D3D3"
+            app:dialInactiveColor="#E0E0E0"
+            app:dialSpeedColor="#2196F3"
+            app:dialSpeedAlertColor="#FB0202"
+            app:subDivisionCircleColor="#000000"
+            app:divisionCircleColor="#3F51B5"
+            app:speedTextColor="#121212"
+            app:unitOfMeasurementTextColor="#235468"
+            app:speedLimitTextColor="#000000"/>
+
+    </FrameLayout>
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:ems="10"
+        android:inputType="number" />
+
+    <EditText
+        android:id="@+id/speed_limit"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:ems="10"
+        android:inputType="number" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:text="Update" />
+
+
+</LinearLayout>
